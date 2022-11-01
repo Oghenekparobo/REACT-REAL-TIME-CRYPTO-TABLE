@@ -20,16 +20,16 @@ export default function Row({ crypto }) {
       </td>
       <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
         <p className="text-gray-900 whitespace-no-wrap">
-          ${crypto.current_price}
+          ${crypto.current_price.toFixed(3).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')}
         </p>
         <p className="text-gray-600 whitespace-no-wrap">USD</p>
       </td>
       <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-        <p className="text-gray-600 whitespace-no-wrap">${crypto.market_cap}</p>
+        <p className="text-gray-600 whitespace-no-wrap">${crypto.market_cap.toFixed(2).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')}</p>
       </td>
       <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
         <p className="text-gray-600 whitespace-no-wrap">
-          ${crypto.total_volume}
+          ${crypto.total_volume.toFixed(2).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')}
         </p>
       </td>
       <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
